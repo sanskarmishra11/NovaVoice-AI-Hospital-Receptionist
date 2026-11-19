@@ -1,0 +1,5 @@
+# never commit real Retell exports or keys
+Retell*.json
+*.env
+.env*
+config/agent_config.json

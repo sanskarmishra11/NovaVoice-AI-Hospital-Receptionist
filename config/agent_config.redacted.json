@@ -1,0 +1,72 @@
+{
+  "agent_id": "",
+  "channel": "voice",
+  "last_modification_timestamp": 1783632086021,
+  "agent_name": "NovaVoice AI",
+  "response_engine": {
+    "type": "retell-llm",
+    "llm_id": "<LLM_ID>",
+    "version": 0
+  },
+  "language": "en-US",
+  "data_storage_setting": "everything",
+  "opt_in_signed_url": false,
+  "version": 0,
+  "assigned_tags": [],
+  "is_published": false,
+  "post_call_analysis_model": "gpt-4.1",
+  "pii_config": {
+    "mode": "post_call",
+    "categories": []
+  },
+  "handbook_config": {
+    "default_personality": true,
+    "ai_disclosure": true
+  },
+  "voice_id": "retell-Cimo",
+  "max_call_duration_ms": 3600000,
+  "interruption_sensitivity": 0.9,
+  "allow_user_dtmf": true,
+  "user_dtmf_options": {},
+  "retellLlmData": {
+    "llm_id": "<LLM_ID>",
+    "version": 0,
+    "model_config": {
+      "type": "cascading",
+      "primary": {
+        "model": "gpt-5.1",
+        "tier": "standard"
+      }
+    },
+    "model": "gpt-5.1",
+    "model_high_priority": false,
+    "model_ultrafast": false,
+    "general_prompt": "<see prompts/system_prompt.md>",
+    "general_tools": [
+      {
+        "name": "end_call",
+        "description": "End the call when user has to leave (like says bye) or you are instructed to do so.",
+        "type": "end_call",
+        "speak_after_execution": true
+      },
+      {
+        "event_type_id": "<YOUR_CAL_EVENT_TYPE_ID>",
+        "cal_api_key": "<REDACTED - set in Retell dashboard>",
+        "timezone": "Asia/Kolkata",
+        "speak_after_execution": true,
+        "name": "NovaCare_book_appointment_cal",
+        "description": "When users ask to book an appointment, book it on the calendar.",
+        "type": "book_appointment_cal"
+      }
+    ],
+    "start_speaker": "agent",
+    "begin_message": "Thank you for calling NovaCare Hospital. I'm NovaVoice AI, your virtual receptionist. How may I assist you today?",
+    "knowledge_base_ids": [],
+    "kb_config": {
+      "top_k": 3,
+      "filter_score": 0.6
+    },
+    "last_modification_timestamp": 1783761664224,
+    "is_published": false
+  }
+}
